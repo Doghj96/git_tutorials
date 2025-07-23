@@ -5,8 +5,9 @@ metadata:
   labels:
     app: web
 spec:
+  restartPolicy: Always
   containers:
   - image: nginx:1.28
-    name: web  
+    name: web
     ports:
-      containerPort: 80
+      containerPort: 80.
