@@ -10,4 +10,8 @@ spec:
   - image: nginx:1.28
     name: web
     ports:
-      containerPort: 80.
+      containerPort: 80
+  command:
+    - /bin/bash
+    - -c
+    - sleep 600;
