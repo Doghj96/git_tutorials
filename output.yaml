@@ -6,7 +6,7 @@ metadata:
     app: web
 spec:
   containers:
-  - image: nginx
+  - image: nginx:1.28
     name: web  
     ports:
       containerPort: 80
