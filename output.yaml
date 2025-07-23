@@ -18,6 +18,9 @@ spec:
     - name: db
       image: mariadb
       commands:
-        - /bin/basj
+        - /bin/bash
         - -c
         - tail -f log.txt
+  volumes:
+    name: log
+    emptyDir: {}
