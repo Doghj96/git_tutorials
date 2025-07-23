@@ -7,14 +7,17 @@ metadata:
 spec:
   restartPolicy: Always
   containers:
-  - image: nginx:1.28
-    name: web
-    ports:
-      containerPort: 80
-    command:
-      - /bin/bash
-      - -c
-      - sleep 600;
-  - name: db
-    image: mariadb
-
+    - image: nginx:1.28
+      name: web
+      ports:
+        containerPort: 80
+      commands:
+        - /bin/bash
+        - -c
+        - ehco $(date) > log.txt;
+    - name: db
+      image: mariadb
+      commands:
+        - /bin/basj
+        - -c
+        - tail -f log.txt
