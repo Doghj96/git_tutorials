@@ -18,16 +18,3 @@ spec:
       volumeMounts:
       - mountPath: /var/log
         name: log
-    - name: db
-      image: mariadb
-      commands:
-        - /bin/basj
-        - -c
-        - tail -f log.txt
-      volumeMounts:
-      - mountPath: /var/log
-        name: log
-  volumes:
-  - name: log
-    persistentVolumeClaim:
-      claimName: log-pvc
