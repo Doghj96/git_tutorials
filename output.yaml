@@ -21,3 +21,6 @@ spec:
         - /bin/basj
         - -c
         - tail -f log.txt
+  volumes:
+    name: log
+    emptyDir: {}
