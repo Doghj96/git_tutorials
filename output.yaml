@@ -28,5 +28,6 @@ spec:
       - mountPath: /var/log
         name: log
   volumes:
-    name: log
-    emptyDir: {}
+  - name: log
+    persistentVolumeClaim:
+      claimName: log-pvc
